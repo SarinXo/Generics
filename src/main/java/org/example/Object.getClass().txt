@@ -1,0 +1,16 @@
+class Object{
+    Class<?> getClass();
+}
+
+class Number{
+    Class<? extends Number> getClass();
+}
+
+class Integer{
+    Class<? extends Integer> getClass();
+}
+
+Number n = new Integer(1);
+Class<? extends Number> c = n.getClass();
+
+Это безопасно!!! Другое будет с ошибкой

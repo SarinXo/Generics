@@ -1,0 +1,16 @@
+public class Helper<T>{
+    public List<Integer> numbers(){
+        return Arrays.asList(1, 2);
+    }
+
+    public static void main(String[] args){
+        //Вся информация о Generic стирается и java будет думать что у нас
+        //Нетипизированный лист
+        //Helper helper = new Helper<>(); - 'это с ошибкой'
+        //Helper<?> helper = new Helper<>(); - 'это с без'
+        for(Integer number : helper.numbers()){//error
+            ...
+        }
+    }
+}
+

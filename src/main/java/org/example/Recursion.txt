@@ -1,0 +1,12 @@
+BaseStream<T, S extends BaseStream<T, S>>{
+    S sequential();
+    S parallel()
+}
+
+Stream<T> extends BaseStream<T, Stream<T>>
+
+stream.filter(Objects::nonNull).
+      .parallel()
+      .map(Integer::parseInt);
+
+Это позваляет импользовать методы родителя как будто он находится в child

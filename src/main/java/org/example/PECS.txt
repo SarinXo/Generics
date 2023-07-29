@@ -1,0 +1,10 @@
+(Producer-Extends, Consumer-Super)
+продюсер кладет, потребитель берет
+
+Если параметризуемый тип представляет Type продюсера, использовать <? super T>
+Если это потребитель типа Type, использовать <? super T>
+
+public static <T> T max(Collection<? extends T> coll, Compatator<? super T> comp){}
+это дает гибкость:
+    Collection.max(List<Integer>, Comparator<Number>);
+    Collection.max(List<String>, Comparator<Object>);
